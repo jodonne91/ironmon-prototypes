@@ -16,5 +16,12 @@ var Leech = function(){ }
   It returns 1.
 */
 Leech.prototype.use = function(opponent) {
+
+	opponent.health -= 1;
+
+	if(Math.random() > .5){
+		this.power += 1;
+	}
   
+  	return 1;
 }

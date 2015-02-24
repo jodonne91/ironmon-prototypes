@@ -20,5 +20,19 @@ var Charge = function(){ }
   It returns the amount of damage done (which can be 0)
 */
 Charge.prototype.use = function(opponent) {
+
+  var damage = Math.ceil(Math.random()*this.power*2);
+
+  if(this.charged){
+    opponent.health -= damage;
+    charged = false;
+    return damage;
+  }
+
+  this.charged = true;
+
+  return 0;
+
+
   
 }

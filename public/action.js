@@ -3,7 +3,7 @@
 
   It doesn't take in any parameters or have any properties.
 */
-var Action = function(){ }
+var Action = function(){}
 
 /*
   This function should be executed in the context of an Ironmon instance.
@@ -17,9 +17,9 @@ var Action = function(){ }
   (This is copied over from last night's assignment. Wheeee!!) 
 */
 Action.prototype.use = function(opponent) {
-  var damage = Math.ceil(Math.random() * this.power)
+  var damage = Math.ceil(Math.random() * this.power);
 
-  opponent.health = opponent.health - damage
+  opponent.health -= damage;
 
-  return damage
+  return damage;
 }

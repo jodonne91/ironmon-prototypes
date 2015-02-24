@@ -11,6 +11,11 @@
 */
 var Ironmon = function(name) {
 
+  this.name = name;
+  this.health = 25;
+  this.power = 1;
+  this.charged = false;
+
 }
 
 /*
@@ -23,12 +28,21 @@ var Ironmon = function(name) {
 */
 Ironmon.prototype.heal = function() {
 
+  var recover = Math.ceil(Math.random()*5);
+  this.health += recover;
+
+  if (this.health > 25 ){
+    this.health = 25
+  }
+
 }
 
 /*
   This function adds one to the power of the Ironmon.
 */
 Ironmon.prototype.train = function() {
+
+  this.power += 1;
 
 }
 
@@ -38,6 +52,8 @@ Ironmon.prototype.train = function() {
   Otherwise, it returns false.
 */
 Ironmon.prototype.active = function() {
+
+  return (this.health > 0)
 
 }
 
@@ -51,6 +67,9 @@ Ironmon.prototype.active = function() {
     passing in the opponent Ironmon as a parameter.
 */
 Ironmon.prototype.action = function(opponent, action) {
+
+  return action.use.call(this,opponent);
+
 
 }
 
