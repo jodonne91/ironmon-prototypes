@@ -1,0 +1,115 @@
+*{
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.battlefield{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background-color: lightgoldenrodyellow;
+}
+
+.turn{
+
+	font-size: 2em;
+	position: absolute;
+
+}
+
+.turn-left{
+
+	color: #792854;
+	font-weight: bold;
+	top: 150px;
+	right: -300px;
+
+}
+
+.turn-right{
+
+	color: #221F1E;
+	font-weight: bold;
+	top: 420px;
+	left: -300px;
+
+}
+
+.left{
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.field{
+	height: 50%;
+	width: 51%;
+	position: relative;
+	background-color: tomato;
+}
+
+.char{
+	height: 80%;
+	width: 83%;
+	position: absolute;
+}
+
+.left-char{
+	right:0px;
+}
+
+.menu {
+	height: 66%;
+	width: 100%;
+	float: left;
+	position: relative;
+	top: 102px;
+}
+
+.actions {
+	height: 100%;
+	width: 30%;
+	text-align: center;
+}
+
+.right-actions {
+	float: right;
+}
+
+.left-actions {
+	float: left;
+}
+
+.stats {
+	height: 100%;
+	width: 70%;
+}
+
+.left-stats{
+	float: right;
+}
+
+.right-stats{
+	float: left;
+}
+
+.image {
+	height: 100%;
+	width: 100%;
+}
+
+.button{
+	height: 27px;
+	width: 100px;
+	margin: 5px;
+	background-color: green;
+	font-size: 18px;
+}
