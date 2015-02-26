@@ -25,7 +25,7 @@ Charge.prototype.use = function(opponent) {
 
   if(this.charged){
     opponent.health -= damage;
-    charged = false;
+    this.charged = false;
     return damage;
   }
 

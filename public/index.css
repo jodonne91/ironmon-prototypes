@@ -1,6 +1,6 @@
 *{
-	border: 1px solid black;
 	box-sizing: border-box;
+	/*border: 1px solid black;*/
 }
 
 body{
@@ -11,7 +11,7 @@ body{
 
 .battlefield{
 	height: 100%;
-	width: 100%;
+	width: 1000px;
 	position: relative;
 	background-color: lightgoldenrodyellow;
 }
@@ -78,6 +78,8 @@ body{
 	height: 100%;
 	width: 30%;
 	text-align: center;
+	position: relative;
+	bottom: 95px;
 }
 
 .right-actions {
@@ -89,16 +91,29 @@ body{
 }
 
 .stats {
-	height: 100%;
-	width: 70%;
+	height: 40%;
+	width: 100%;
+	top: 130px;
+	position: absolute;
+}
+
+.stat{
+	display: inline-block;
+	position: relative;
+	margin-left: 30px;
+	font-family: fantasy;
 }
 
 .left-stats{
 	float: right;
+	margin-top: 15px;
+	margin-left: 70px;
 }
 
 .right-stats{
 	float: left;
+	margin-top: 15px;
+	right: 65px;
 }
 
 .image {
@@ -107,9 +122,14 @@ body{
 }
 
 .button{
-	height: 27px;
-	width: 100px;
-	margin: 5px;
+	height: 30px;
+	width: 130px;
+	margin: 10px;
 	background-color: green;
 	font-size: 18px;
+
+}
+
+.hidden{
+	display: none;
 }

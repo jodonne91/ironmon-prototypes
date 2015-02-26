@@ -5,6 +5,7 @@
     <script src="libs/jquery.js"></script>      <!-- reference to jQuery -->
     <script src="index.js"></script>            <!-- reference to js script -->
     <link href="index.css" rel="stylesheet" />    <!-- reference to css stylesheet -->
+    <script src = "libs/handlebars.js"></script>
 
 <!-- Ironmon js files -->
     <script src="ironmon.js"></script>
@@ -27,10 +28,11 @@
 			</div>
 			<div class = "menu left-menu">
 				<div class = "actions left-actions">
-					<button class = "button attack">Attak</button>
-					<button class = "button simple">Simple</button>
-					<button class = "button charge">Charge</button>
-					<button class = "button leech">Leech</button>
+					<button class = "button left-button" id = "attack">Attak</button>
+					<button class = "button left-button"  id = "simple">Simple</button>
+					<button class = "button left-button" id = "charge">Charge</button>
+					<button class = "button left-button" id = "leech">Leech</button>
+					<button class = "button left-button" id = "heal">Heal</button>
 
 				</div>
 				<div class = "stats left-stats">
@@ -50,18 +52,29 @@
 			</div>
 			<div class = "menu right-menu">
 				<div class = "stats right-stats">
-				
+
 				</div>
+
 				<div class = "actions right-actions">
-					<button class = "button attack">Attak</button>
-					<button class = "button simple">Simple</button>
-					<button class = "button charge">Charge</button>
-					<button class = "button leech">Leech</button>
+					<button class = "button right-button" id = "attack">Attak</button>
+					<button class = "button right-button" id = "simple">Simple</button>
+					<button class = "button right-button" id = "charge">Charge</button>
+					<button class = "button right-button" id = "leech">Leech</button>
+					<button class = "button right-button" id = "heal">Heal</button>
 
 				</div>
 			</div>
 		</div>
 
+
+<!-- HANDLEBARS STATS TEMPATE -->
+				<script id="stats-template" type="text/x-handlebars-template">
+						<h2 class = "stat name {{side}}"> {{name}} </h2>
+						<h2 class = "stat health {{side}}"> {{health}} </h2>
+						<h2 class = "stat power {{side}}"> {{power}} </h2>
+						<h2 class = "stat charged {{side}}"> {{charged}} </h2>
+				</script>
+<!--                          -->
 
 	</div>
 
